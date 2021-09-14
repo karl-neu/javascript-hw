@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex-4</title>
+
+    <!--     Завдання 4
+Створити карту мандрівника із запитома напрямку prompt('Куди прямуєш - r/l/t/b');
+Де
+r - на право
+l- на ліво
+t - вниз
+b - вверх
+Закінчення маршруту cancel або не введений можливий варіант.
+Мо мірі вводу все шлях відображувати на сторінці, по закінченні гри -  "Маршрут складено"
+
+Напр
+вверх
+на право
+Маршрут складено -->
+
+    <script type="text/javascript">
+        let direction, flag = true;
+
+        do {
+            direction = prompt('Куди прямуєш - r/l/t/b');
+            switch (direction) {
+                case 'r':
+                    document.write('на право<br />');
+                    break;
+                case 'l':
+                    document.write('на ліво<br />');
+                    break;
+                case 't':
+                    document.write('вверх<br />');
+                    break;
+                case 'b':
+                    document.write('вниз<br />');
+                    break;
+                case 'cancel':
+                default:
+                    document.write('Маршрут складено<br />');
+                    flag = false;
+                    break;
+            }
+        } while (flag);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
