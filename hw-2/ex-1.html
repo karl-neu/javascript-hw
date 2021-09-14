@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex-1</title>
+    <!--Переписати умову з використанням лише тернарних операторів
+
+    let result;
+
+    if (a + b < 4) {
+      result = 'Мало';
+    } else if (a + b > 100) {
+      result = 'Багато';
+    } else {
+        result = 'В самий раз';
+    }
+    Результат вивести на екран, a i b - запитати у юзера-->
+
+    <script type="text/javascript">
+        let a = Number(prompt("Insert a"));
+        let b = Number(prompt("Insert b"));
+
+        (a + b < 4) ? result = 'Мало'
+            : (a + b > 100) ? result = 'Багато'
+                : result = 'В самий раз';
+
+        document.write("result ---  " + result + "<br />");
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
