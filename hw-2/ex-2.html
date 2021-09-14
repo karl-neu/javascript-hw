@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex-2</title>
+
+    <!--     Завдання 2
+    За допомогою циклу while напишіть гру "Вгадайте колір за 5 спроб"
+    Загаданий колір 'red'.
+    На кожній спробі потрібно відобразити номер спроби. По завершеню гри на сторінці має бути повідомлення
+     'Вітаємо ви вгадали із n спроби' або 'Ви не вгадали' -->
+
+    <script type="text/javascript">
+        let myColor = 'red', color;
+        let yourTry = 0;
+
+        do {
+            yourTry++;
+            color = prompt('#' + yourTry + ' Please enter color: ');
+        } while (color != myColor && yourTry < 5);
+
+        (color == myColor) ? document.write("Вітаємо ви вгадали із " + yourTry + " спроби<br />")
+            : document.write("Ви не вгадали<br />");
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
