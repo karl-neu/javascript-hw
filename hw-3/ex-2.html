@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex-2</title>
+
+    <!--     Завдання 2
+Напишіть функцію, яка буде приймати число та визначати:
+ - число позитивне чи негативне
+ - чи воно просте (лише два натуральних дільники) чи складене
+ - чи ділиться на 2, 3, 5, 6, 9 без залишку -->
+
+    <script type="text/javascript">
+        let numbers = [2, 3, 5, 6, 9];
+
+        let a = Number(prompt("Insert a"));
+
+        scanNumber(a);
+
+        function isPrime(num) {
+            if (num > 1) {
+                for (let index = 2; index < num; index++)
+                    if (num % index == 0) return false;
+
+                return true;
+            }
+            return false;
+        }
+
+        function isDividedByNumbers(a) {
+            let counter = 0;
+
+            numbers.forEach(function (item, index, array) {
+                if (a % item == 0) counter++;
+            })
+
+            return (counter == numbers.length) ? true : false;
+        }
+
+        function scanNumber(a) {
+            if (a >= 0) {
+                document.writeln('позитивне<br />');
+                if (a > 0)
+                    isPrime(a) ? document.writeln('просте<br />')
+                        : document.writeln('складене<br />');
+            }
+            else if (a < 0)
+                document.writeln('негативне<br />');
+
+            if (isDividedByNumbers(a))
+                document.writeln('ділиться на ' + numbers + ' без залишку<br />')
+            else
+                document.writeln('не ділиться на ' + numbers + ' без залишку<br />')
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
