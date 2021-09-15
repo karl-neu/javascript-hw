@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex-1</title>
+
+    <!--     Функції
+Завдання 1
+Створити 4 функції для арифметичних дій:
+add - додавання
+sub - віднімання
+mul - множення
+div - ділення
+Кожна функція має приймати два параметри і виводити на екран результат обрахування
+Функція ділення повинна робити перевірку ділення на нуль.
+Користувач вводить значення та вибрати саму операцію -->
+
+    <script type="text/javascript">
+        let a = Number(prompt("Insert a"));
+        let b = Number(prompt("Insert b"));
+        let operation = prompt("insert operation: (+, -, *, /)");
+
+        switch (operation) {
+            case '+':
+                add(a, b);
+                break;
+            case '-':
+                sub(a, b);
+                break;
+            case '*':
+                mul(a, b);
+                break;
+            case '/':
+                div(a, b);
+                break;
+            default:
+                document.writeln('unkonwn operation')
+                break;
+        }
+
+        function add(a, b) {
+            document.writeln(a + " + " + b + " = " + (a + b));
+        }
+
+        function sub(a, b) {
+            document.writeln(a + " - " + b + " = " + (a - b));
+        }
+
+        function mul(a, b) {
+            document.writeln(a + " * " + b + " = " + (a * b));
+        }
+
+        function div(a, b) {
+            b == 0 ? document.writeln('you cant divide by zero')
+                : document.writeln(a + " / " + b + " = " + (a / b));
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
