@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex-4</title>
+    <!--Масиви
+         Завдання 2
+    Створити двомірний масив елементів розмірністю 5х5 і заповнити його довільними цілими числами.
+    По головній діагоналі всі числа зі знаом (-) замінити на 0, а числа зі знаком (+) на число 1.
+    Вивести матриці на екран -->
+
+    <script type="text/javascript">
+        let matrix = [
+            [2, 1, 1, 1, 1],
+            [1, -1, 1, 1, 1],
+            [1, 1, 2, 1, 1],
+            [1, 1, 1, -1, 1],
+            [1, 1, 1, 1, 2],]
+
+        document.writeln(matrix.join('<br />'));
+        document.writeln('<br /><br />');
+
+        let i = 0;
+
+        while (i < 5) {
+            matrix[i][i] < 0 ? matrix[i][i] = 0
+                : matrix[i][i] = 1;
+            i++;
+        }
+
+        document.writeln(matrix.join('<br />'));
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
