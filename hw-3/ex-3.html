@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--     Масиви
+
+Завдання 1
+Створити масив розмірністю N елементів, заповнити його довільними цілими числами.
+Вивести найбільш значення масиву, найменше значення, загальну суму елементів, середнє арифметичне всіх елементів,
+всі непарні значення -->
+
+    <script type="text/javascript">
+        let myArr = [12, 25, 11, 90, 100, 1];
+
+        document.writeln('Array: [ ' + myArr + ' ]<br />');
+
+        let maxNumber = myArr.reduce(function (max, current) {      //найбільше значення масиву
+            return Math.max(max, current);
+        });
+
+        document.writeln('Max: ' + maxNumber + '<br />');
+
+        let minNumber = myArr.reduce(function (min, current) {      //найменше значення
+            return Math.min(min, current);
+        });
+
+        document.writeln('Min: ' + minNumber + '<br />');
+
+        let sum = myArr.reduce(function (prev, current) {       //загальна сума елементів
+            return prev + current;
+        });
+
+        document.writeln('Sum: ' + sum + '<br />');
+
+        let avr = sum / myArr.length;                         //середнє арифметичне всіх елементів
+
+        document.writeln('Average: ' + avr + '<br />');
+
+        let oddNumbers = myArr.filter(number => number % 2 != 0);   //всі непарні значення
+
+        document.writeln('Odd numbers: [ ' + oddNumbers + ' ]<br />');
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
