@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex-1</title>
+
+    <!-- Задание 1.
+Створити об'єкт 'Документ', в якому створити властивості 'Заголовок, Тіло, Футер, Дата'.
+Створити в об'єкті створений об'єкт 'Застосунок'.
+Створити в об'єкті 'Застосунок' вкладені об'єкти 'Заголовок, Тіло, Футер, Дата'.
+Створити методи для заповнення та відображення документа. -->
+
+    <script type="text/javascript">
+        let doc = new Object();
+
+        doc.title = '';
+        doc.body = '';
+        doc.footer = '';
+        doc.data = '';
+
+        doc.app = new Object();
+
+        doc.app.title = '';
+        doc.app.body = '';
+        doc.app.footer = '';
+        doc.app.data = '';
+
+        doc.setDoc = function (title, body, footer, data, app) {
+            this.title = title;
+            this.body = body;
+            this.footer = footer;
+            this.data = data;
+            this.app.title = app.title;
+            this.app.body = app.body;
+            this.app.footer = app.footer;
+            this.app.data = app.data;
+        }
+
+        doc.showDoc = function () {
+            console.log(this);
+        }
+
+        doc.setDoc('title', 'body', 'footer', 'data', { title: 'app.title', body: 'app.body', footer: 'app.footer', data: 'app.data' });
+        doc.showDoc();
+    </script>
+</head>
+<body>
+</body>
+</html>
