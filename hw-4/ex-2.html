@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex-2</title>
+
+  <!--     Завдання 2
+Реалізвуати метод для глибокого копіювання об'єктів
+
+let user = {
+  name: "Джон",
+  go: function() { alert(this.name) }
+}
+
+(user.go)() -->
+
+  <script type="text/javascript">
+    let user = {
+      name: "Джон",
+      go: function () { alert(this.name) }
+    }
+
+    function myDeepCopy(myObject) {
+      let copiedObject, value, key;
+
+      if (typeof myObject !== "object" || myObject === null) {
+        return myObject;
+      }
+
+      copiedObject = Array.isArray(myObject) ? [] : {};
+
+      for (key in myObject) {
+        value = myObject[key];
+
+        copiedObject[key] = myDeepCopy(value);
+      }
+
+      return copiedObject;
+    }
+
+    let user2 = myDeepCopy(user);
+
+    user2.name="Ivan";
+
+    user.go();
+    user2.go();
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>

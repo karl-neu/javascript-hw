@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex-3</title>
+
+    <!--     Завдання 3
+Є об'єкт salaries із зарплатами типиу:
+
+let salaries = {
+  "John": 100,
+  "Pete": 300,
+  "Mary": 250
+};
+Створити функцію topSalary(salaries), яка повертає ім'я найбільш оплачуваного працівника.
+
+Якщо об'єкт salaries порожній, то потрібно повернути null.
+Якщо кілька високоолачуваних працівників, можна повернути будь-якого з них.
+P.S. ВикорийстайтеObject.entries та деструктуризацію, щоб перебрати пари ключ/значення. -->
+
+    <script type="text/javascript">
+        let salaries = {
+            "John": 100,
+            "Pete": 300,
+            "Mary": 250
+        };
+
+        let salariesEmpty = {};
+
+        function topSalary(salaries) {
+            if (Object.entries(salaries).length == 0) return null;
+
+            let tempSalary = 0, tempName = '';
+
+            for (let [name, salary] of Object.entries(salaries)) {
+                if (salary > tempSalary) {
+                    tempSalary = salary;
+                    tempName = name;
+                }
+            }
+
+            return tempName;
+        }
+
+        console.log(topSalary(salariesEmpty));
+        console.log(topSalary(salaries));
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

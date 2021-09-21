@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex-1</title>
+    <script type="text/javascript">
+        /* Завдання 2
+        Перепишіть конструктор Human на клас, 
+        унаслідюючи його створіть клас Students де мають бути перевезначені методи для
+        роботи з job
+        До кожного конструктору/класу створіть хоча б один екземпляр */
+
+        class Human {
+            _job = '';
+
+            constructor(name, surname, age) {
+                this.name = name;
+                this.surname = surname;
+                this.age = age;
+            }
+
+            setJob(value) {
+                this._job = value;
+            }
+
+            getJob() {
+                return this._job;
+            }
+        }
+
+        class Student extends Human {
+            constructor(name, surname, age) {
+                super(name, surname, age)
+            }
+
+            setJob(value) {
+                this._job = this.name + ' ' + value;
+            }
+
+            getJob() {
+                return 'Student ' + this._job;
+            }
+        }
+
+        let human = new Human('Ivan', 'Burchak', 24);
+        human.setJob('run');
+
+        let student = new Student('Maksim', 'Pechericya', 77);
+        student.setJob('study');
+
+        console.log(human, student);
+        console.log(human.getJob(), student.getJob());
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
