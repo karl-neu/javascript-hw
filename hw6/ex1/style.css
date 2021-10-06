@@ -1,0 +1,25 @@
+html,body{ margin:0; padding:0; height:100%; width:100%; }
+#box{
+  height:100%;
+  width:100%;
+  overflow:hidden;
+  background-color: black;
+}
+
+#box > div{
+    width: 5rem;
+    height: 5rem;
+    border: 0.5rem outset pink;
+}
+
+#e1{
+    background-color: crimson;
+}
+
+#e2{
+    background-color: blueviolet;
+}
+
+#e3{
+    background-color: forestgreen;
+}
