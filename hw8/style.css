@@ -1,0 +1,9 @@
+img {
+  height: 250px;
+}
+
+.price {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}

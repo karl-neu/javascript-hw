@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Pizza</title>
+</head>
+
+<body>
+    <button type="button" class="btn btn-primary position-relative" style="margin: 10px;" id="btnOrders">
+        Basket
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="basketBadge">
+
+            <span class="visually-hidden">Pizzas</span>
+        </span>
+    </button>
+
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" id="imgForPizza">
+        <div class="card-body">
+            <h5 class="card-title" id="titlePizza"></h5>
+            <p class="card-text" id="descriptionPizza"></p>
+            <div id="ingridients"></div>
+            <a href="./index.html" class="btn btn-primary" id="btnAdd">Add</a>
+            <strong class="price"><div id="price"></div></strong>
+        </div>
+    </div>
+    <script src="./pizzaMain.js" type="module"></script>
+</body>
+
+</html>
